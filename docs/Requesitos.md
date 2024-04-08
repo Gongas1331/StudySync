@@ -1,5 +1,5 @@
 
-**Requisitos funcionais** 
+**Requisitos** 
 - Criar e gerir calendário letivo
 - O utilizador deve ser recompensado por ser produtivo:
 	- Receber experiência ao concluir uma tarefa 
@@ -8,7 +8,7 @@
 	- Receber troféus por lifetime achievements 
 - Agendar e receber alertas sobre exames e projetos 
 - Criar projetos com subtarefas e gerir o seu progresso 
-- -Poder definir metas e ver estatísticas 
+- Poder definir metas e ver estatísticas 
 - O utilizador deve poder definir tarefas e marcá-las como concluídas 
 
 
