@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.navbar {
+  position: fixed;
+  left: 0%;
+  bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  border-radius: 80%;
+}
+
+.navbar button {
+  border-radius: 80%;
+}
