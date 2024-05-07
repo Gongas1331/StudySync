@@ -1,19 +1,28 @@
-// import { useState } from 'react'
-import './App.css'
+// import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
 
-function App() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage from './pages/Homepage';
+import Tasks from './pages/Tasks';
+import Calendar from './pages/Calendar';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
 
+export default function App() {
   return (
     <>
-      <div className='navbar'>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-      </div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/tasks' element={<Tasks />} />
+          <Route path='/calendar' element={<Calendar />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/settings' element={<Settings />} />
+        </Routes>
+      </Router>
+      <Navbar />
     </>
-  )
+  );
 }
 
-export default App
