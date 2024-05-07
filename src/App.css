@@ -6,42 +6,6 @@
   color: aliceblue;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .navbar {
   position: fixed;
   left: 0%;
@@ -69,4 +33,69 @@
   justify-content: center;
   align-items: center;
   border-radius: 80%;
+}
+
+.task-list > div {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #9f9f9f;
+  margin-bottom: 10px;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  width: 80%;
+  margin-bottom: 10px;
+
+}
+
+.task-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+
+.subtasks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 0.5em;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+.subtask-item {
+  margin-top: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.icon-button {
+  padding: 8px;
+}
+
+.input-checkbox {
+  margin-right: 0.5em;
 }
