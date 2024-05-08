@@ -1,16 +1,16 @@
 // import React from 'react';
+import { Link } from 'react-router-dom';
 import {FaTasks,FaBars,FaRegCalendarAlt} from 'react-icons/fa';
-import {GoProject} from 'react-icons/go';
 import '../App.css';
 
 export default function Navbar() {
   return (
     <nav className='navbar'>
-      <button><FaTasks/></button>
-      <button><GoProject/></button>
-      <button><FaBars/></button>
-      <button><FaRegCalendarAlt/></button>
-      <button><FaBars/></button>
+    <Link to="/tasks"><button><FaTasks/></button></Link>
+    <Link to="/calendar"><button><FaRegCalendarAlt/></button></Link>
+    <Link to="/profile"><button><FaBars/></button></Link>
+    <Link to="/store"><button><FaRegCalendarAlt/></button></Link>
+    <Link to="/leaderboard"><button><FaBars/></button></Link>
     </nav>
   );
-}
+}     
