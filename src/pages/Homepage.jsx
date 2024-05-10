@@ -8,16 +8,13 @@ export default function Homepage() {
   const [selectedReward, setSelectedReward] = useState(null);
 
   useEffect(() => {
-    // Show popup when the component mounts
     setShowPopup(true);
   }, []);
 
-  // Function to handle login
   const handleLogin = () => {
-    setShowPopup(true); // Show the popup again on subsequent logins
+    setShowPopup(true);
   };
 
-  // Function to handle reward selection
   const handleRewardSelection = (reward) => {
     setSelectedReward(reward);
     setLoginStreak(loginStreak + 1);
@@ -25,10 +22,8 @@ export default function Homepage() {
     setShowPopup(false);
   };
 
-  // Function to get the reward for the current day
   const getRewardForDay = (day) => {
-    // This is a placeholder function, you can customize it as needed
-    return day * 10; // For example, 10 gems for day 1, 20 gems for day 2, and so on
+    return day * 10; 
   };
 
   return (
