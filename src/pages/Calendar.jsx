@@ -1,11 +1,37 @@
-// import React from 'react';
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
+import { useSwipeable } from 'react-swipeable';
+import './calendar.css';
 import '../App.css';
 
-export default function Calendar() {
+export default function MyCalendar() {
+  const [date, setDate] = useState(new Date());
+
+  const handleDateChange = (newDate) => {
+    setDate(newDate);
+    // You can perform additional actions when the date changes if needed
+  };
+
+  const handleSwipe = ({ dir }) => {
+    if (dir === 'Left') {
+      // Swipe left to navigate to the next month
+      setDate(new Date(date.getFullYear(), date.getMonth() + 1, 1));
+    } else if (dir === 'Right') {
+      // Swipe right to navigate to the previous month
+      setDate(new Date(date.getFullYear(), date.getMonth() - 1, 1));
+    }
+  };
+
+  const handlers = useSwipeable({ onSwiped: handleSwipe });
+
   return (
-    <div>
-      <h1>Welcome to the Calendar!</h1>
-      <p>This is the Calendar of the app.</p>
+    <div {...handlers}>
+      <h1>Calendar</h1>
+      <p>Selected Date: {date.toLocaleDateString()}</p>
+      <Calendar
+        onChange={handleDateChange}
+        value={date}
+      />
     </div>
   );
 }
