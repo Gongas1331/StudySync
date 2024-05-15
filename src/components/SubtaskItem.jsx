@@ -1,14 +1,14 @@
-import React from 'react';
-import Checkbox from '@material-ui/core/Checkbox';
-import Typography from '@material-ui/core/Typography';
+// import React from 'react';
+import Checkbox from '@mui/material/Checkbox';
 
+/* eslint-disable react/prop-types */
 
 function formatDate(dateString) {
   const date = new Date(dateString);
   return date.toLocaleDateString();
 }
 
-function SubtaskItem({ subtask, toggleSubtaskCompletion }) {
+export default function SubtaskItem({ subtask, toggleSubtaskCompletion }) {
   const difficultyStyle = {
       Easy: {
           color: 'green',
@@ -37,25 +37,24 @@ function SubtaskItem({ subtask, toggleSubtaskCompletion }) {
   };
 
   return (
-      <div className="subtask-item">
-          <Checkbox
-              checked={subtask.completed}
-              onChange={toggleSubtaskCompletion}
-              color="primary"
-          />
-          <div style={{ flexGrow: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <Typography variant="body1">{subtask.title}</Typography>
-              <div>
-                  <Typography variant="body2" style={{ color: '#666', fontSize: '0.8rem' }}>
-                      Due: {formatDate(subtask.deadline)}
-                  </Typography>
-                  <Typography variant="body2" style={difficultyStyle[subtask.difficulty]}>
-                      {subtask.difficulty}
-                  </Typography>
-              </div>
-          </div>
-      </div>
-  );
+    <div className="subtask-item">
+        <Checkbox
+            checked={subtask.completed}
+            onChange={toggleSubtaskCompletion}
+            color="primary"
+        />
+        <div style={{ flexGrow: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <p>{subtask.title}</p>
+            <div>
+                <small style={{ color: '#666', fontSize: '0.8rem' }}>
+                    Due: {formatDate(subtask.deadline)}
+                </small>
+                <small style={difficultyStyle[subtask.difficulty]}>
+                    {subtask.difficulty}
+                </small>
+            </div>
+        </div>
+    </div>
+);
 }
 
-export default SubtaskItem;

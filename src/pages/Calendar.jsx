@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Calendar from 'react-calendar';
 import { useSwipeable } from 'react-swipeable';
-import './calendar.css';
 import '../App.css';
 
 export default function MyCalendar() {
@@ -27,11 +26,11 @@ export default function MyCalendar() {
   return (
     <div {...handlers}>
       <h1>Calendar</h1>
-      <p>Selected Date: {date.toLocaleDateString()}</p>
       <Calendar
         onChange={handleDateChange}
         value={date}
       />
+      <p>Selected Date: {date.toLocaleDateString()}</p>
     </div>
   );
 }
