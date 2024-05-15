@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TaskItem from '../components/TaskItem';
-import { FaLaptopCode, FaUserFriends, FaRunning, FaBroom, FaStar } from 'react-icons/fa';
+import { FaBook, FaBriefcase, FaUsers, FaBroom, FaRunning, FaLightbulb } from 'react-icons/fa';
 
 const categoryIcons = {
-  Study: <FaLaptopCode />,
-  Social: <FaUserFriends />,
-  Fitness: <FaRunning />,
-  Chores: <FaBroom />,
-  'Self-Improvement': <FaStar />
+  'Study': <FaBook />,
+  'Work': <FaBriefcase />,
+  'Social': <FaUsers />,
+  'Fitness': <FaRunning />,
+  'Chores': <FaBroom />,
+  'Self-Improvement': <FaLightbulb />
 };
 
 const initialTasks = [
@@ -76,7 +77,7 @@ const initialTasks = [
   }
 ];
 
-function Tasks() {
+export default function Tasks() {
   const [tasks, setTasks] = useState(initialTasks);
 
   const toggleTaskCompletion = (categoryId, taskId) => {
@@ -134,4 +135,3 @@ function Tasks() {
   );
 }
 
-export default Tasks;
