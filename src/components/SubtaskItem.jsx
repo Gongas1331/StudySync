@@ -41,7 +41,12 @@ export default function SubtaskItem({ subtask, toggleSubtaskCompletion }) {
         <Checkbox
             checked={subtask.completed}
             onChange={toggleSubtaskCompletion}
-            color="primary"
+            sx={{
+              color: subtask.completed ? 'default' : 'white', // Change color based on task completion
+              '&.Mui-checked': {
+                color: 'default',
+              },
+            }} 
         />
         <div style={{ flexGrow: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <p>{subtask.title}</p>

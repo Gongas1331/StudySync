@@ -37,6 +37,11 @@ const initialTasks = [
     ]
   },
   {
+    category: "Work",
+    tasks: [
+    ]
+  },
+  {
     category: "Social",
     tasks: [
     ]
@@ -119,7 +124,7 @@ export default function Tasks() {
     <div className="task-list">
       {tasks.map(category => (
         <div key={category.category}>
-          <h2>{categoryIcons[category.category]} {category.category}</h2>
+          <h3>{categoryIcons[category.category]} {category.category}</h3>
           {category.tasks.map(task => (
             <TaskItem
               key={task.id}
