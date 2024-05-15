@@ -25,10 +25,15 @@ export default function TaskItem({ task, toggleTaskCompletion, toggleSubtaskComp
                 <Checkbox
                     checked={task.completed}
                     onChange={() => toggleTaskCompletion(task.id)}
-                    color="primary"
+                    sx={{
+                      color: task.completed ? 'default' : 'white', // Change color based on task completion
+                      '&.Mui-checked': {
+                        color: 'default',
+                      },
+                    }} 
                 />
                 {task.title}
-                <IconButton onClick={() => setExpanded(!expanded)} edge="end" size="small">
+                <IconButton onClick={() => setExpanded(!expanded)} edge="end" size="small" color='light'>
                     {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                 </IconButton>
             </div>

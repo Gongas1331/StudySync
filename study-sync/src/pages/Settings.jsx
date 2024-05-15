@@ -9,25 +9,30 @@ export default function Settings() {
 
   return (
     <>
-      <Typography variant="h5">Account</Typography>
-      <div>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
+          <Typography variant="h5" align="left">Account</Typography>
+      </Box>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>Email</Typography>
-        <Typography>carlos@gmail.com</Typography>
-      </div>
-      <div>
+        <Typography>diogo@gmail.com</Typography>
+      </Box>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>Password</Typography>
-        <Button variant="contained" onClick={() => { }}>
-          Change Password
-        </Button>
+          <Button variant="contained">
+            Change Password
+          </Button>
+      </Box>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
+        <Typography>Password</Typography>
         <RouterLink to="/logout">
           <Button variant="contained">
             Logout
           </Button>
         </RouterLink>
-      </div>
+      </Box>
 
       <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
-        <Typography variant="h5">
+        <Typography variant="h5" align="left">
           Notifications
         </Typography>
         <Box display="flex" alignItems="center">
@@ -36,39 +41,41 @@ export default function Settings() {
         </Box>
       </Box>
 
-      <Typography variant="h5">Support and Help</Typography>
-      <div>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
+        <Typography variant="h5" align="left">Support and Help</Typography>
+      </Box>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>FAQs</Typography>
         <Button variant="contained" onClick={() => window.open('http://link-to-your-faq', '_blank')}>
           Link
         </Button>
-      </div>
-      <div>
+      </Box>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>Support contact</Typography>
         <Button variant="contained" onClick={() => window.open('mailto:deti@ua.pt', '_blank')}>
           deti@ua.pt
         </Button>
-      </div>
+      </Box>
 
-      <Typography variant="h5">Privacy and Security</Typography>
-      <div>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
+        <Typography variant="h5" align="left">Privacy and Security</Typography>
         <Typography>Personal data management</Typography>
         <Button variant="contained" onClick={() => window.open('http://link-to-personal-data-management', '_blank')}>
           Link
         </Button>
-      </div>
-      <div>
+      </Box>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>Terms of service</Typography>
         <Button variant="contained" onClick={() => window.open('http://link-to-terms-of-service', '_blank')}>
           Link
         </Button>
-      </div>
-      <div>
+      </Box>
+      <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>Privacy policy</Typography>
         <Button variant="contained" onClick={() => window.open('http://link-to-privacy-policy', '_blank')}>
           Link
         </Button>
-      </div>
+      </Box>
     </>
   );
 }
