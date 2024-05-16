@@ -77,7 +77,7 @@ const initialTasks = [
   {
     category: "Chores",
     tasks: [
-     
+
     ]
   }
 ];
@@ -86,10 +86,10 @@ export default function Tasks() {
   const [tasks, setTasks] = useState(initialTasks);
 
   const toggleTaskCompletion = (categoryId, taskId) => {
-    setTasks(prev => prev.map(category => 
+    setTasks(prev => prev.map(category =>
       category.category === categoryId ? {
         ...category,
-        tasks: category.tasks.map(task => 
+        tasks: category.tasks.map(task =>
           task.id === taskId ? {
             ...task,
             completed: !task.completed,

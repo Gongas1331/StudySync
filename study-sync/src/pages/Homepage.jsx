@@ -21,12 +21,12 @@ function CurrencyBar({ streakfreeze, coins }) {
             <IconButton edge="start" color="lightBlue" aria-label="menu" sx={{ mr: 1 }}>
               <WhatshotIcon />
             </IconButton>
-            <Typography variant="h6" color="light" component="div">
+            <Typography variant="h6" color="white" component="div">
               {streakfreeze}
             </Typography>
           </Box>
             <Box display="flex" alignItems="center">
-              <Typography variant="h6" color="light" component="div">
+              <Typography variant="h6" color="white" component="div">
                 {coins}
               </Typography>
               <IconButton edge="start" color="yellow" aria-label="menu" sx={{ ml: 1 }}>
@@ -46,7 +46,7 @@ function WeeklyActivityTracker({ daysCompleted }) {
 
   return (
     <>
-      <Typography sx={{ pb: 1 }} variant="h4jin" color="inherit" component="div">
+      <Typography sx={{ pb: 1 }} variant="h5" color="inherit" component="div">
         Weekly Activity
       </Typography>
       <div className="weekly-tracker">

@@ -15,7 +15,7 @@ function calculateProgress(subtasks) {
     return (completedSubtasks / totalSubtasks) * 100;
 }
 
-export default function TaskItem({ task, toggleTaskCompletion, toggleSubtaskCompletion }) {
+export default function TaskItem({ task, toggleTaskCompletion, toggleSubtaskCompletion, categoryId}) {
     const [expanded, setExpanded] = useState(false);
     const progress = calculateProgress(task.subtasks);
 
@@ -39,14 +39,16 @@ export default function TaskItem({ task, toggleTaskCompletion, toggleSubtaskComp
             </div>
             <LinearProgress variant="determinate" value={progress} style={{ width: '100%', marginTop: '5px' }} />
             {expanded && (
-                <div className="subtasks-container">
-                    {task.subtasks.map(subtask => (
-                        <SubtaskItem
-                            key={subtask.id}
-                            subtask={subtask}
-                            toggleSubtaskCompletion={() => toggleSubtaskCompletion(task.id, subtask.id)}
-                        />
-                    ))}
+            <div className="subtasks-container">
+                {task.subtasks.map(subtask => (
+                    <SubtaskItem
+                        key={subtask.id}
+                        subtask={subtask}
+                        toggleSubtaskCompletion={toggleSubtaskCompletion}
+                        categoryId={categoryId}
+                        taskId={task.id}
+                    />
+                ))}
                 </div>
             )}
         </div>

@@ -8,7 +8,7 @@ import Tasks from './pages/Tasks';
 import Leaderboard from './pages/Leaderboard';
 import Calendar from './pages/Calendar';
 import Store from './pages/Store';
-// import Profile from './pages/Profile';
+import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import Logout from './pages/Logout';
 import { ThemeProvider,createTheme } from '@mui/material/styles';
@@ -79,8 +79,8 @@ export default function App() {
             <Route path='/leaderboard' element={<Leaderboard />} />
             <Route path='/calendar' element={<Calendar />} />
             <Route path='/store' element={<Store />} />
-            {/* <Route path='/profile' element={<Profile />} /> */}
-            <Route path='/profile' element={<Settings />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/settings' element={<Settings />} />
             <Route path='/logout' element={<Logout />} />
           </Routes>
         </div>
