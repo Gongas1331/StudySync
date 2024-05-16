@@ -3,16 +3,6 @@ import { Link } from 'react-router-dom';
 import {FaHome,FaTasks,FaRegCalendarAlt,FaUser,FaMedal,FaStore} from 'react-icons/fa';
 import '../App.css';
 
-// import * as React from 'react';
-// import Box from '@mui/material/Box';
-// import CssBaseline from '@mui/material/CssBaseline';
-// import BottomNavigation from '@mui/material/BottomNavigation';
-// import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-// import RestoreIcon from '@mui/icons-material/Restore';
-// import FavoriteIcon from '@mui/icons-material/Favorite';
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-// import Paper from '@mui/material/Paper';
-
 export default function Navbar() {
   return (
     <nav className='navbar'>

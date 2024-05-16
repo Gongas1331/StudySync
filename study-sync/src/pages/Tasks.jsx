@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TaskItem from '../components/TaskItem';
 import { FaBook, FaBriefcase, FaUsers, FaBroom, FaRunning, FaLightbulb } from 'react-icons/fa';
+import Header from '../components/Header';
 
 const categoryIcons = {
   'Study': <FaBook />,
@@ -122,6 +123,7 @@ export default function Tasks() {
 
   return (
     <div className="task-list">
+    <Header pagename={'Tasks'}></Header>
       {tasks.map(category => (
         <div key={category.category}>
           <h3>{categoryIcons[category.category]} {category.category}</h3>

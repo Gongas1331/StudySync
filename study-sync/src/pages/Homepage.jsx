@@ -1,44 +1,12 @@
 import { useState, useEffect } from 'react';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import WhatshotIcon from '@mui/icons-material/Whatshot';
 import Addtask from '../components/Addtask';
-import { Link } from 'react-router-dom';
 import { FaGift } from 'react-icons/fa';
-import { Box, Typography, IconButton, Toolbar, AppBar, Checkbox } from '@mui/material';
 import { FaFire } from 'react-icons/fa';
+import Header from '../components/Header';
+import CurrencyBar from '../components/CurrencyBar';
+import { Checkbox, Typography, Box } from '@mui/material';
 
 /* eslint-disable react/prop-types */
-
-
-// CurrencyBar Component
-function CurrencyBar({ streakfreeze, coins }) {
-  return (
-    <AppBar position="static" color="transparent" elevation={0}>
-    <Link to="/store">
-      <Toolbar>
-        <Box display="flex" justifyContent="space-between" width="100%">
-          <Box display="flex" alignItems="center">
-            <IconButton edge="start" color="lightBlue" aria-label="menu" sx={{ mr: 1 }}>
-              <WhatshotIcon />
-            </IconButton>
-            <Typography variant="h6" color="white" component="div">
-              {streakfreeze}
-            </Typography>
-          </Box>
-            <Box display="flex" alignItems="center">
-              <Typography variant="h6" color="white" component="div">
-                {coins}
-              </Typography>
-              <IconButton edge="start" color="yellow" aria-label="menu" sx={{ ml: 1 }}>
-                <MonetizationOnIcon />
-              </IconButton>
-            </Box>
-        </Box>
-      </Toolbar>
-          </Link>
-    </AppBar>
-  );
-}
 
 // Weekly Activity Tracker Component
 function WeeklyActivityTracker({ daysCompleted }) {
@@ -158,6 +126,7 @@ export default function Homepage() {
 
   return (
     <div className="homepage">
+      <Header pagename={'Home'}></Header>
       <CurrencyBar streakfreeze={streakfreeze} coins={coins} />
       <WeeklyActivityTracker daysCompleted={daysCompleted} />
       <DailyTasksGoal tasksCompleted={completedTasks} totalTasks={totalTasks} />

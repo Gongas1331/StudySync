@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Typography, Button, Switch, Box } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { FaBell } from 'react-icons/fa';
+import Header from '../components/Header';
 
 export default function Settings() {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -9,8 +10,9 @@ export default function Settings() {
 
   return (
     <>
+    <Header pagename={'Settings'}></Header>
       <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
-          <Typography variant="h4" align="left">Account</Typography>
+          <Typography variant="h5" align="left">Account</Typography>
       </Box>
       <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>Email</Typography>
@@ -31,7 +33,7 @@ export default function Settings() {
       </Box>
 
       <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
-        <Typography variant="h4" align="left">
+        <Typography variant="h5" align="left">
           Notifications
         </Typography>
         <Box display="flex" alignItems="center">
@@ -41,7 +43,7 @@ export default function Settings() {
       </Box>
 
       <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
-        <Typography variant="h4" align="left">Support and Help</Typography>
+        <Typography variant="h5" align="left">Support and Help</Typography>
       </Box>
       {/* <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>FAQs</Typography>

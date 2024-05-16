@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { AppBar, Box, Button, Toolbar, IconButton, Typography, Paper, LinearProgress, Avatar, Card, CardContent } from '@mui/material';
 import { styled } from '@mui/system';
-import SettingsIcon from '@mui/icons-material/Settings';
-import { Link as RouterLink } from 'react-router-dom';
 import { FaBook, FaBriefcase, FaUsers, FaBroom, FaRunning, FaLightbulb } from 'react-icons/fa';
 import Tooltip from '@mui/material/Tooltip';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Header from '../components/Header';
+import { Button, Typography, Paper, LinearProgress, Avatar, Card, CardContent, Box } from '@mui/material';
 
 
 const LargeAvatar = styled(Avatar)({
@@ -39,18 +38,7 @@ export default function Profile() {
 
   return (
     <div>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h5" sx={{ flexGrow: 1 }}>
-            Profile
-          </Typography>
-          <IconButton edge="end" color="inherit" aria-label="settings">
-            <RouterLink to="/settings">
-              <SettingsIcon color='light' />
-            </RouterLink>
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+      <Header pagename={'Profile'}></Header>
       <Box display="flex" justifyContent="center" sx={{ marginTop: '2%', marginBottom: '0%' }}>
         <LargeAvatar alt="User Name" src="./src/assets/paulo_noites_gold.png" />
       </Box>
