@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Calendar from 'react-calendar';
 import { useSwipeable } from 'react-swipeable';
 import '../App.css';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 
 export default function MyCalendar() {
   const [date, setDate] = useState(new Date());
@@ -25,7 +26,13 @@ export default function MyCalendar() {
 
   return (
     <div {...handlers}>
-      <h1>Calendar</h1>
+    <AppBar position="static" sx={{marginBottom: '5%'}}>
+      <Toolbar>
+        <Typography variant="h5" sx={{ flexGrow: 1 }}>
+          Calendar
+        </Typography>
+      </Toolbar>
+    </AppBar>
       <Calendar
         onChange={handleDateChange}
         value={date}

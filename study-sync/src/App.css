@@ -1,6 +1,6 @@
 :root {
-  --dark-color: #212b38;
-  --dark-color-light: #37465b;
+  --dark-color: #080937;
+  --dark-color-dark: #0d097e;
   --light-color: #08c6ab;
   --light-color-light: #5affe7;
   --highlight-color: #726eff;
@@ -17,7 +17,7 @@
 }
 
 body {
-  background-color: var(--dark-color);
+  background: linear-gradient(to bottom right, var(--light-color), var(--highlight-color));
   color: var(--light);
 }
 
@@ -51,8 +51,8 @@ body {
   align-self: center;
   align-items: center;
   justify-content: space-evenly;
-  background-color: var(--dark-color-light);
-  border-color: var(--dark-color-light);
+  background-color: var(--light);
+  border-color: var(--dark-color-dark);
   border-radius: 80px;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -73,8 +73,8 @@ body {
 }
 
 .navbar button:hover {
-  background-color: floralwhite;
-  color: #747bff;
+  background-color: var(--light-color);
+  color: var(--light);
 }
 
 .task-list>div {
@@ -144,7 +144,7 @@ h2 {
 
 
 .buttons {
-  color: var(--dark-color-light);
+  color: var(--dark-color-dark);
   background-color: var(--light-color);
 }
 
@@ -233,7 +233,7 @@ h2 {
 .react-calendar__button {
   background: none;
   border: none;
-  color: var(--dark-color-light);
+  color: var(--dark-color-dark);
   font: inherit;
   cursor: pointer;
   padding: 0;

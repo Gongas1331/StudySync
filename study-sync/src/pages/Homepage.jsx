@@ -134,6 +134,7 @@ export default function Homepage() {
   };
 
   const [streakfreeze, setStreakfreeze] = useState(67);
+  const [coins, setCoins] = useState(2000);
   const [allTasksCompleted, setAllTasksCompleted] = useState(false);
   const [daysCompleted, setDaysCompleted] = useState(4); 
 
@@ -149,12 +150,11 @@ export default function Homepage() {
   useEffect(() => {
     if (completedTasks === totalTasks && !allTasksCompleted) {
       setStreakfreeze(streakfreeze + 1);
+      setCoins(coins + 100);
       setAllTasksCompleted(true);
       setDaysCompleted(daysCompleted + 1);
     }
-  }, [completedTasks, totalTasks, streakfreeze, allTasksCompleted, daysCompleted]);
-
-  const coins = 2000;
+  }, [completedTasks, totalTasks, streakfreeze, coins, allTasksCompleted, daysCompleted]);
 
   return (
     <div className="homepage">

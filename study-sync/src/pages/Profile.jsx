@@ -41,7 +41,7 @@ export default function Profile() {
     <div>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Typography variant="h5" sx={{ flexGrow: 1 }}>
             Profile
           </Typography>
           <IconButton edge="end" color="inherit" aria-label="settings">
@@ -55,7 +55,7 @@ export default function Profile() {
         <LargeAvatar alt="User Name" src="./src/assets/paulo_noites_gold.png" />
       </Box>
       <Box display="flex" justifyContent="center" sx={{ marginTop: '0%', marginBottom: '5%' }}>
-        <Typography variant="h5">Paulo Noites</Typography>
+        <Typography variant="h5" color="gold" >Paulo Noites</Typography>
       </Box>
       <Box display="flex" justifyContent="center" sx={{ marginBottom: '1%' }}>
         <Paper elevation={3} sx={{ padding: '0.5%', marginTop: '-4%', zIndex: '2', width: '20%', borderRadius: '15px', textAlign: 'center', color: 'primary.main', borderColor: 'primary.main', border: 2, bgcolor: 'light.main' }}>
@@ -110,7 +110,7 @@ export default function Profile() {
           <Typography align='left' marginLeft={'1em'} variant="h5">Achievements</Typography>
         </HtmlTooltip>
         <ClickAwayListener onClickAway={handleTooltipClose}>
-          <Button onClick={handleTooltipOpen}>Rankings</Button>
+          <Button color='light' onClick={handleTooltipOpen}>Rankings</Button>
         </ClickAwayListener>
       </Box>
       <Box
@@ -151,7 +151,7 @@ export default function Profile() {
             </Box>
           </CardContent>
         </Card>
-        <Card sx={{ minWidth: 275, margin: 2, backgroundColor: 'transparent', color: 'lightBlue.main', borderColor: 'lightBlue.main', border: 1, borderRadius: '20px' }}>
+        <Card sx={{ minWidth: 275, margin: 2, backgroundColor: 'lightBlue.main', color: 'light.main', borderColor: 'lightBlue.main',border: 1, borderRadius: '20px' }}>
           <CardContent>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <FaBroom size={32} />
