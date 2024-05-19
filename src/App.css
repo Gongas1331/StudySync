@@ -1,0 +1,240 @@
+:root {
+  --dark-color: #080937;
+  --dark-color-dark: #0d097e;
+  --light-color: #08c6ab;
+  --light-color-light: #5affe7;
+  --highlight-color: #726eff;
+  --light: #f9f9f9;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  text-align: center;
+  overflow-x: hidden;
+  /* prevents horizontal scrolling */
+}
+
+body {
+  background: linear-gradient(to bottom right, var(--light-color), var(--highlight-color));
+  color: var(--light);
+}
+
+.App {
+  align-items: center;
+  overflow: hidden;
+  overflow-x: hidden;
+  /* prevents horizontal scrolling */
+}
+
+.App-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* prevents horizontal scrolling */
+  text-align: center;
+  position: relative;
+  padding-bottom: 3em;
+  /* Adjust this value to match the height of your navbar */
+  -webkit-overflow-scrolling: touch;
+  /* Enable smooth scrolling on iOS devices */
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  height: 3em;
+  top: calc(100vh - 3.5em);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--light);
+  border-color: var(--dark-color-dark);
+  border-radius: 80px;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.navbar button {
+  height: 3em;
+  width: 3em;
+  padding: 0%;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80%;
+  color: var(--light);
+  background-color: var(--highlight-color);
+  border-color: var(--highlight-color);
+}
+
+.navbar button:hover {
+  background-color: var(--light-color);
+  color: var(--light);
+}
+
+.task-list>div {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #9f9f9f;
+  margin-bottom: 10px;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 0.7em;
+  width: 80%;
+  margin-bottom: 10px;
+
+}
+
+.task-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+
+.subtasks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 0.5em;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+.subtask-item {
+  margin-top: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.icon-button {
+  padding: 8px;
+}
+
+.input-checkbox {
+  margin-right: 0.5em;
+}
+
+
+.buttons {
+  color: var(--dark-color-dark);
+  background-color: var(--light-color);
+}
+
+.weekly-tracker {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.day,
+.gift-icon {
+  flex: 1;
+  text-align: center;
+  border-radius: 12px;
+  border-color: var(--light);
+  border-style: solid;
+  border-width: 1px;
+  margin: 2px;
+}
+
+.day.completed,
+.gift-icon.completed {
+  background-color: var(--highlight-color);
+  /* Change to your preferred highlight color */
+}
+
+.fab-bottom-right {
+  position: fixed;
+  /* top: calc(100vh - 40em);
+  left: calc(100vw - 15em); */
+}
+
+.date-container {
+  text-align: left;
+  margin-left: 0.6em;
+}
+
+.activities-list {
+  text-align: left;
+  margin-left: 0.5em;
+}
+
+.react-calendar__tile{
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  align-items: center;
+  background: var(--light);
+  color: var(--highlight-color);
+}
+
+.react-calendar__navigation button {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  align-items: center;
+  background: var(--light);
+  color: var(--highlight-color);
+  border-radius: 40px;
+}
+
+
+.react-calendar__tile--active {
+  background: var(--highlight-color);
+  color: var(--light);
+}
+
+.react-calendar__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--highlight-color);
+  color: var(--light);
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.react-calendar__navigation__arrow:disabled {
+  color: #ccc;
+}
+
+.react-calendar__button {
+  background: none;
+  border: none;
+  color: var(--dark-color-dark);
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
