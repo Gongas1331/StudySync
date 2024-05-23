@@ -12,28 +12,28 @@ export default function Store() {
     setValue(newValue);
   };
   const frameItems = [
-    { name: 'Tophat', price: 100 },
-    { name: 'Spinner', price: 200 },
-    { name: 'Flower', price: 300 },
-    { name: 'Summer', price: 400 },
+    { type: 1, name: 'Tophat', price: 100 },
+    { type: 1, name: 'Spinner', price: 200 },
+    { type: 1, name: 'Flower', price: 300 },
+    { type: 1, name: 'Summer', price: 400 },
   ];
   const iconItems = [
-    { name: 'Yeti', price: 100 },
-    { name: 'Shark', price: 200 },
-    { name: 'Dog', price: 300 },
-    { name: 'Ninja', price: 400 },
+    { type: 2, name: 'Yeti', price: 100 },
+    { type: 2, name: 'Shark', price: 200 },
+    { type: 2, name: 'Dog', price: 300 },
+    { type: 2, name: 'Ninja', price: 400 },
   ];
   const themeItems = [
-    { name: 'Monochrome', price: 100 },
-    { name: 'Sunset', price: 200 },
-    { name: 'Midnight', price: 300 },
-    { name: 'Candy', price: 400 },
+    { type: 3, name: 'Monochrome', price: 100 },
+    { type: 3, name: 'Sunset', price: 200 },
+    { type: 3, name: 'Midnight', price: 300 },
+    { type: 3, name: 'Candy', price: 400 },
   ];
   const titleItems = [
-    { name: 'Mr. Worldwide', price: 100 },
-    { name: 'Bigbrain', price: 200 },
-    { name: 'Gigachad', price: 300 },
-    { name: 'Gymrat', price: 400 },
+    { type: 4, name: 'Mr. Worldwide', price: 100 },
+    { type: 4, name: 'Bigbrain', price: 200 },
+    { type: 4, name: 'Gymrat', price: 300 },
+    { type: 4, name: 'Gigachad', price: 400 },
   ];
 
   const [streakfreeze] = useState(68);

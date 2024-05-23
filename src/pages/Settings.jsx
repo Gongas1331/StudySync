@@ -20,13 +20,13 @@ export default function Settings() {
       </Box>
       <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>Password</Typography>
-          <Button variant="contained">
+          <Button variant="outlined" color="light" >
             Change Password
           </Button>
       </Box>
       <Box justifyContent="space-between" alignItems="center">
-        <RouterLink to="/logout">
-          <Button variant="contained">
+        <RouterLink to="/">
+          <Button variant="outlined" color="red" >
             Logout
           </Button>
         </RouterLink>
@@ -53,7 +53,7 @@ export default function Settings() {
       </Box> */}
       <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ margin: '20px', marginLeft: '1.1em' }}>
         <Typography>Contact support</Typography>
-        <Button variant="contained" onClick={() => window.open('mailto:deti@ua.pt', '_blank')}>
+        <Button variant="outlined" color="light" onClick={() => window.open('mailto:deti@ua.pt', '_blank')}>
           deti@ua.pt
         </Button>
       </Box>

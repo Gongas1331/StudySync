@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Paulo Noites",
+      "password": "1234",
+      "streak": 68,
+      "coins": 2500,
+      "level": 15,
+      "tasks": [
+        {
+          "class": "study",
+          "name": "Requirements",
+          "date": "10/04/2024",
+          "project": "IHC Project",
+          "difficulty": "Medium",
+          "description": ""
+        },
+        {
+          "class": "study",
+          "name": "Prototyping",
+          "date": "09/05/2024",
+          "repeats": "",
+          "project": "IHC Project",
+          "difficulty": "Hard",
+          "description": ""
+        },
+        {
+          "class": "study",
+          "name": "Presentation",
+          "date": "23/05/2024",
+          "repeats": "",
+          "project": "IHC Project",
+          "difficulty": "Hard",
+          "description": ""
+        },
+        {
+          "class": "work",
+          "name": "Job Enterview",
+          "date": "30/05/2024",
+          "repeats": "",
+          "project": "Get a job",
+          "difficulty": "Medium",
+          "description": ""
+        },
+        {
+          "class": "work",
+          "name": "Students@Deti",
+          "date": "06/06/2024",
+          "repeats": "",
+          "project": "Get a job",
+          "difficulty": "Medium",
+          "description": ""
+        },
+        {
+          "class": "fitness",
+          "name": "Run 3 km",
+          "date": "23/05/2024",
+          "repeats": "daily",
+          "project": "",
+          "difficulty": "Hard",
+          "description": ""
+        }
+      ],
+      "items": [
+        {
+          "type": 1,
+          "name": "Tophat"
+        },
+        {
+          "type": 3,
+          "name": "Monochrome"
+        },
+        {
+          "type": 4,
+          "name": "Bigbrain"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "Eusébio Quinas",
+      "password": "0000",
+      "streak": 7,
+      "coins": 1000,
+      "level": 3,
+      "tasks": [
+      ]
+    }
+  ]
+}

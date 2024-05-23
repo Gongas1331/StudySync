@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
+import Login from './pages/Login';
 import Tasks from './pages/Tasks';
 import Leaderboard from './pages/Leaderboard';
 import Calendar from './pages/Calendar';
@@ -74,7 +75,8 @@ export default function App() {
       <Router>
         <div className="App-content">
           <Routes>
-            <Route path='/' element={<Homepage />} />
+            <Route path='/' element={<Login />} />
+            <Route path='/home' element={<Homepage />} />
             <Route path='/tasks' element={<Tasks />} />
             <Route path='/leaderboard' element={<Leaderboard />} />
             <Route path='/calendar' element={<Calendar />} />
