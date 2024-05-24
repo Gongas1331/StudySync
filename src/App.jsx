@@ -2,7 +2,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Login from './pages/Login';
 import Tasks from './pages/Tasks';
@@ -68,27 +68,32 @@ const theme = createTheme({
     },
   },
 });
+function MainContent() {
+  const location = useLocation();
 
+  return (
+    <div className="App-content">
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/home' element={<Homepage />} />
+        <Route path='/tasks' element={<Tasks />} />
+        <Route path='/leaderboard' element={<Leaderboard />} />
+        <Route path='/calendar' element={<Calendar />} />
+        <Route path='/store' element={<Store />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/settings' element={<Settings />} />
+        <Route path='/logout' element={<Logout />} />
+      </Routes>
+      {location.pathname !== '/' && <Navbar />}
+    </div>
+  );
+}
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <div className="App-content">
-          <Routes>
-            <Route path='/' element={<Login />} />
-            <Route path='/home' element={<Homepage />} />
-            <Route path='/tasks' element={<Tasks />} />
-            <Route path='/leaderboard' element={<Leaderboard />} />
-            <Route path='/calendar' element={<Calendar />} />
-            <Route path='/store' element={<Store />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/settings' element={<Settings />} />
-            <Route path='/logout' element={<Logout />} />
-          </Routes>
-        </div>
-        <Navbar />
+        <MainContent />
       </Router>
     </ThemeProvider>
   );
 }
-

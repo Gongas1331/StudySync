@@ -6,7 +6,7 @@ import '../App.css';
 export default function Navbar() {
   return (
     <nav className='navbar'>
-    <Link to="/"><button><FaHome /></button></Link>
+    <Link to="/home"><button><FaHome /></button></Link>
     <Link to="/tasks"><button><FaTasks/></button></Link>
     <Link to="/calendar"><button><FaRegCalendarAlt/></button></Link>
     <Link to="/profile"><button><FaUser/></button></Link>

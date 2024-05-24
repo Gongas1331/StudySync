@@ -128,32 +128,54 @@ function Trophies() {
 }
 
 function Stats() {
-  return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center' }}>
-      <Card sx={{ width: '45%', margin: '2%', backgroundColor: 'transparent', color: 'white', borderColor: 'white', border: 1, borderRadius: '20px' }}>
+  return (      
+    <Box>
+    <Typography align='left' marginTop={'2%'} marginLeft={'1em'} variant="h5">Stats</Typography>
+      <Box
+        sx={{
+          display: 'flex',
+          height: '10vh',
+          overflowX: 'auto',
+          flexDirection: 'row',
+          scrollbarWidth: 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        }}
+      >
+      <Card sx={{ minWidth: 275, margin: 1, backgroundColor: 'transparent', color: 'white', borderColor: 'white', border: 1, borderRadius: '20px' }}>
         <CardContent>
-          <Typography variant="h6">Total Logins</Typography>
-          <Typography variant="body1">{142}</Typography>
-        </CardContent>
-      </Card>
-      <Card sx={{ width: '45%', margin: '2%', backgroundColor: 'transparent', color: 'white', borderColor: 'white', border: 1, borderRadius: '20px' }}>
-        <CardContent>
-          <Typography variant="h6">Total XP</Typography>
-          <Typography variant="body1">{1560}</Typography>
-        </CardContent>
-      </Card>
-      <Card sx={{ width: '45%', margin: '2%', backgroundColor: 'transparent', color: 'white', borderColor: 'white', border: 1, borderRadius: '20px' }}>
-        <CardContent>
-          <Typography variant="h6">Highest Rank</Typography>
-          <Typography variant="body1">{'Gold'}</Typography>
-        </CardContent>
-      </Card>
-      <Card sx={{ width: '45%', margin: '2%', backgroundColor: 'transparent', color: 'white', borderColor: 'white', border: 1, borderRadius: '20px' }}>
-        <CardContent>
-          <Typography variant="h6">Highest Streak</Typography>
-          <Typography variant="body1">{67}</Typography>
-        </CardContent>
-      </Card>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant="body2" sx={{ ml: 1 }}>Total Logins:</Typography>
+              <Typography variant="body2" sx={{ ml: 'auto' }}>{113} days</Typography>
+            </Box>
+          </CardContent>
+        </Card>
+        <Card sx={{ minWidth: 275, margin: 1, backgroundColor: 'transparent', color: 'white', borderColor: 'white', border: 1, borderRadius: '20px' }}>
+          <CardContent>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant="body2" sx={{ ml: 1 }}>Total XP :</Typography>
+              <Typography variant="body2" sx={{ ml: 'auto' }}>{1570}</Typography>
+            </Box>
+          </CardContent>
+        </Card>
+        <Card sx={{ minWidth: 275, margin: 1, backgroundColor: 'transparent', color: 'white', borderColor: 'white', border: 1, borderRadius: '20px' }}>
+          <CardContent>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant="body2" sx={{ ml: 1 }}>Highest Rank :</Typography>
+              <Typography variant="body2" sx={{ ml: 'auto' }}>Gold</Typography>
+            </Box>
+          </CardContent>
+        </Card>
+        <Card sx={{ minWidth: 275, margin: 1, backgroundColor: 'transparent', color: 'white', borderColor: 'white', border: 1, borderRadius: '20px' }}>
+          <CardContent>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant="body2" sx={{ ml: 1 }}>Highest Streak :</Typography>
+              <Typography variant="body2" sx={{ ml: 'auto' }}>103 days</Typography>
+            </Box>
+          </CardContent>
+        </Card>
+      </Box>
     </Box>
   );
 }
@@ -178,63 +200,7 @@ export default function Profile() {
       <LinearProgress variant="determinate" value={xp} sx={{ height: '2em', width: '80%', margin: 'auto', marginTop: '-5%', borderRadius: '80px', borderColor: 'primary.main', border: 2, bgcolor: 'light.main' }} />
       <Typography variant="h6" sx={{ textAlign: 'center', marginBottom: '2%' }}>{xp}/100 XP</Typography>
 
-
-      <Typography align='left' marginTop={'2%'} marginLeft={'1em'} variant="h5">Stats</Typography>
-      <Box>
-        <Box
-          sx={{
-            display: 'flex',
-            height: '10vh',
-            overflowX: 'auto',
-            flexDirection: 'row',
-            scrollbarWidth: 'none',
-            '&::-webkit-scrollbar': {
-              display: 'none'
-            }
-          }}
-        >
-          <Card sx={{ minWidth: 275, margin: 1, backgroundColor: 'transparent', color: 'gold', borderColor: 'gold', border: 1, borderRadius: '20px' }}>
-            <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Typography variant="body2" sx={{ ml: 1 }}>Total Logins</Typography>
-                <Typography variant="body2" sx={{ ml: 'auto' }}>50 tasks to next rank</Typography>
-              </Box>
-            </CardContent>
-          </Card>
-          <Card sx={{ minWidth: 275, margin: 1, backgroundColor: 'transparent', color: 'white', borderColor: 'white', border: 1, borderRadius: '20px' }}>
-            <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Typography variant="body2" sx={{ ml: 1 }}>Total XP</Typography>
-                <Typography variant="body2" sx={{ ml: 'auto' }}>15 tasks to next rank</Typography>
-              </Box>
-            </CardContent>
-          </Card>
-          <Card sx={{ minWidth: 275, margin: 1, backgroundColor: 'transparent', color: 'brown.main', borderColor: 'brown.main', border: 1, borderRadius: '20px' }}>
-            <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Typography variant="body2" sx={{ ml: 1 }}>Social</Typography>
-                <Typography variant="body2" sx={{ ml: 'auto' }}>8 tasks to next rank</Typography>
-              </Box>
-            </CardContent>
-          </Card>
-          <Card sx={{ minWidth: 275, margin: 1, backgroundColor: 'lightBlue.main', color: 'light.main', borderColor: 'lightBlue.main', border: 1, borderRadius: '20px' }}>
-            <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Typography variant="body2" sx={{ ml: 1 }}>Chores</Typography>
-                <Typography variant="body2" sx={{ ml: 'auto' }}>103 tasks to next rank</Typography>
-              </Box>
-            </CardContent>
-          </Card>
-          <Card sx={{ minWidth: 275, margin: 1, backgroundColor: 'transparent', color: 'silver', borderColor: 'silver', border: 1, borderRadius: '20px' }}>
-            <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Typography variant="body2" sx={{ ml: 1 }}>Self-Improvement</Typography>
-                <Typography variant="body2" sx={{ ml: 'auto' }}>18 tasks to next rank</Typography>
-              </Box>
-            </CardContent>
-          </Card>
-        </Box>
-      </Box>
+      <Stats />
       <Trophies />
     </div>
   );
